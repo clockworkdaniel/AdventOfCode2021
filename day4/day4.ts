@@ -74,12 +74,7 @@ export const getDesiredSheetScore = (
       }
     });
 
-    if (
-      (!lastWin && bingoCount === 0) ||
-      (lastWin && bingoCount !== bingoSheets.length)
-    ) {
-      callNumberIndex++;
-    }
+    callNumberIndex++;
   }
 
   return getScore(bingoSheets[desiredSheetIndex!], callNumber!);
